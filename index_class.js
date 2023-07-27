@@ -26,5 +26,5 @@ var Rectangle = /** @class */ (function () {
 var rect = new Rectangle(5, 10);
 /*const rect2 = new Rectangle(w:52, h:102);
 const rect3 = new Rectangle(w:5, h:102);*/
-rect._width = -2;
+rect.width = -2;
 console.log(rect);
