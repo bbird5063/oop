@@ -11,12 +11,12 @@ class Rectangle {
         return this._width * this._height;
     }
 
-    get width() {
+    public get width() {
         return this._width;
     }
 
-    set width(value) {
-        if(value <+ 0) {
+    public set width(value) {
+        if(value <= 0) {
             this._width = 1;    
         }
         else {
@@ -31,4 +31,4 @@ const rect3 = new Rectangle(w:5, h:102);*/
 
 rect._width = -2;
 
-console.log('ПРОВЕРКА!!!');
+console.log(rect);
