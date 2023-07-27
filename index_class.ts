@@ -1,5 +1,5 @@
 class Rectangle {
-    public _width;
+    private _width;
     private _height;
 
     constructor(w, h) {
@@ -17,7 +17,7 @@ class Rectangle {
 
     public set width(value) {
         if(value <= 0) {
-            this._width = 1;    
+            this._width = 1000;    
         }
         else {
             this._width = value;
@@ -29,6 +29,6 @@ const rect = new Rectangle(5, 10);
 /*const rect2 = new Rectangle(w:52, h:102);
 const rect3 = new Rectangle(w:5, h:102);*/
 
-rect.width = -2; // при rect.width -> set не работает
+rect.width = -22; // при rect.width -> set не работает
 
 console.log(rect);

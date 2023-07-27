@@ -12,7 +12,7 @@ var Rectangle = /** @class */ (function () {
         },
         set: function (value) {
             if (value <= 0) {
-                this._width = 1;
+                this._width = 1000;
             }
             else {
                 this._width = value;
@@ -26,5 +26,5 @@ var Rectangle = /** @class */ (function () {
 var rect = new Rectangle(5, 10);
 /*const rect2 = new Rectangle(w:52, h:102);
 const rect3 = new Rectangle(w:5, h:102);*/
-rect.width = -2;
+rect.width = 22; // при rect.width -> set не работает
 console.log(rect);
