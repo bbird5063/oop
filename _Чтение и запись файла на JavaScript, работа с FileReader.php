@@ -47,6 +47,8 @@ JavaScript НЕ ИМЕЕТ ДОСТУПА К ФАЙЛОВОЙ СИСТЕМЕ!!!
     <input type="file" id="file" value="books.txt"> <!-- type="file" окно "Выбор файла", value="books.txt" - не нужно  -->
     <button id="readFile">Чтение файла</button>
     <div id="text"></div>
+    <div id="err"></div>
+
 
     <script>
         document.querySelector('#readFile').addEventListener('click', function() { // 
@@ -55,6 +57,11 @@ JavaScript НЕ ИМЕЕТ ДОСТУПА К ФАЙЛОВОЙ СИСТЕМЕ!!!
             reader.readAsText(file);
             reader.onload = function() {
                 document.getElementById("text").innerText = reader.result;
+                console.log(reader.result);
+            }
+            reader.onerror = function() {
+                document.getElementById("err").innerText = reader.error;
+                console.log(reader.error);
             }
         });
     </script>
